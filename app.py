@@ -48,6 +48,7 @@ def home():
     Cat = ""
 
     # render a template
+    
     return render_template('NewsClassify.html', Category=Cat)
     # return "Hello, World!"  # return a string
 
