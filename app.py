@@ -1,5 +1,8 @@
 # libraries
 import joblib
+import logging
+
+
 import pickle
 import spacy
 from flask import Flask, render_template, request, redirect, url_for, session, flash
@@ -81,3 +84,5 @@ def Classfy():
 if __name__ == '__main__':
     app.debug = True
     app.run(port=5000, debug=True)
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
