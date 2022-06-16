@@ -48,7 +48,7 @@ def home():
     Cat = ""
 
     # render a template
-    
+
     return render_template('NewsClassify.html', Category=Cat)
     # return "Hello, World!"  # return a string
 
@@ -79,4 +79,5 @@ def Classfy():
 
 
 if __name__ == '__main__':
+    app.debug = True
     app.run(port=5000, debug=True)
